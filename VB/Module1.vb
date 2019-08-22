@@ -1,6 +1,7 @@
 ﻿Module Module1
 
     Sub Main()
+        Debug.Print("Primitive")
         Dim A As Integer
         Dim B As Integer
 
@@ -8,11 +9,12 @@
         B = 2
 
         B = A
-        Debug.Print("Ans  A={0}:B={1}", A, B)
+        Debug.Print($"  A={A}, B={B}")
 
         B = 3
-        Debug.Print("Ans  A={0}:B={1}", A, B)
+        Debug.Print($"  A={A}, B={B}")
 
+        Debug.Print("String")
         Dim sA As String
         Dim sB As String
 
@@ -20,11 +22,12 @@
         sB = "def"
 
         sB = sA
-        Debug.Print("Ans  sA={0}:sB={1}", sA, sB)
+        Debug.Print($"  sA={sA}, sB={sB}")
 
         sB = "123"
-        Debug.Print("Ans  sA={0}:sB={1}", sA, sB)
+        Debug.Print($"  sA={sA}, sB={sB}")
 
+        Debug.Print("Object")
         Dim classA As New AA
         Dim classB As New AA
         Dim classC As New AA
@@ -33,19 +36,20 @@
         classC.Value = 3
 
         classB = classA
-        Debug.Print("Ans  A={0}:B={1}:C={1}", classA.Value, classB.Value, classC.Value)
+        Debug.Print($"  A={classA.Value}, B={classB.Value}, C={classC.Value}")
 
-        classB.Value = 3
-        Debug.Print("Ans  A={0}:B={1}:C={1}", classA.Value, classB.Value, classC.Value)
+        classB.Value = 4
+        Debug.Print($"  A={classA.Value}, B={classB.Value}, C={classC.Value}")
 
         classB.Value = classC.Value
-        Debug.Print("Ans  A={0}:B={1}:C={1}", classA.Value, classB.Value, classC.Value)
+        Debug.Print($"  A={classA.Value}, B={classB.Value}, C={classC.Value}")
 
+        Debug.Print("Method Args")
         HogeByVal(classA)
-        Debug.Print("Byval  A={0}", classA.Value)
+        Debug.Print($"  Byval  A={classA.Value}")
 
         HogeByRef(classA)
-        Debug.Print("Byref  A={0}", classA.Value)
+        Debug.Print($"  Byval  A={classA.Value}")
     End Sub
 
     Sub HogeByVal(ByVal val1 As AA)
