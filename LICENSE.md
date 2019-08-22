@@ -1,4 +1,3 @@
-﻿
 Microsoft Public License (MS-PL)
 
 This license governs use of the accompanying software. If you use the software, you
